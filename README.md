@@ -8,9 +8,9 @@ Para gerar o executável e poder jogar o Keno Bet utilize o seguinte comando.
 ## Makefile
 
 ### Para compilar o programa KENO
-ˋˋˋ
-make
- ˋˋˋ
+
+ˋmakeˋ
+
 ### Para executar o programa KENO
  ˋˋˋ
 ./keno [file address]
