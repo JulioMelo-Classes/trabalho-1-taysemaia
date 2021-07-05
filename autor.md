@@ -2,8 +2,11 @@
 
 Preencha os dados abaixo para identificar a autoria do trabalho.
 
-- Nome: *\<insira seu nome aqui>*
-- Email: *\<insira seu email aqui>*
-- Turma: *\<insira sua turma aqui>*
+- Nome: Tayse de Oliveira Maia
+- Email: tayse.maia@ufrn.edu.br
+- Turma: *T01 - Julio
 
-Repita os campos Nome e Email caso seja uma dupla
+- Nome: Karolayne Belo Silva Galvão de Melo
+- Email: karolbello98@gmail.com
+- Turma: T01 - Julio
+

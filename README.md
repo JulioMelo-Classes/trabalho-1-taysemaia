@@ -1,6 +1,20 @@
-# Trabalho-1
-Repositório contendo as especificações do Trabalho 1 da disciplina de LP1
+# Keno BET
+Versão 1.0 do Projeto da Primeira Unidade da Disciplina de Linguagem de Programação 1 - UFRN. Tratra-se de um programa que reproduz o jogo KENO.
 
-# Documento de Especificação
+# Compilação:
 
-Leia o documento de especificação contido em [Especificação do Trabalho 1](https://docs.google.com/document/d/1nwQxiP9YQzU3O-H4YQMqWRtylqO1AOke8y1rQF7cPEc/edit?usp=sharing). Preencha o autor.md com as informações relativas ao grupo/autor.
+Para gerar o executável e poder jogar o Keno Bet utilize o seguinte comando.
+
+## Makefile
+
+### Para compilar o programa KENO
+ˋˋˋ
+make
+ ˋˋˋ
+### Para executar o programa KENO
+ ˋˋˋ
+./keno [file address]
+ex:
+./keno valido.txt
+ ˋˋˋ
+
