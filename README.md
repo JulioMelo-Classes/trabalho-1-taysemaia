@@ -33,7 +33,7 @@ Lembrando que o arquivo de entrada segue o formato:
 # Dificuldades e Limitações:
 
 ###### As dificuldades da dupla se resumem:
-    * Conciliar de tantos assuntos;
+    * Conciliar tantos assuntos;
 
 ##### Funcionalidades não realizadas:
 
