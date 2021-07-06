@@ -34,7 +34,6 @@ Lembrando que o arquivo de entrada segue o formato:
 
 ###### As dificuldades da dupla se resumem:
     * Conciliar de tantos assuntos;
-    * 
 
 ##### Funcionalidades não realizadas:
 
@@ -42,4 +41,4 @@ Lembrando que o arquivo de entrada segue o formato:
     * Vetor aleatorio repetido nos round's;
     * Metodo addnumber;
     * Alguns casos de testes;
-    *
+
