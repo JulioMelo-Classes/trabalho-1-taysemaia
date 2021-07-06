@@ -32,3 +32,14 @@ Lembrando que o arquivo de entrada segue o formato:
 
 # Dificuldades e Limitações:
 
+###### As dificuldades da dupla se resumem:
+    * Conciliar de tantos assuntos;
+    * 
+
+##### Funcionalidades não realizadas:
+
+    * Comparação de entrada do arquivo com o vetor aleatorio;
+    * Vetor aleatorio repetido nos round's;
+    * Metodo addnumber;
+    * Alguns casos de testes;
+    *
