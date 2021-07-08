@@ -65,7 +65,6 @@
             random.push_back(num_rand);
             i++;
         }
-
     }
 
 
@@ -85,14 +84,16 @@
       @param spot_ O número que desejamos incluir na aposta.
       @return T se o número escolhido for inserido com sucesso; 'F' caso contrário. */
     bool KenoBet::add_number( unsigned short int spot_ ){
+        std::vector<unsigned short int>::iterator it;
         if(spot_ >= 1 && spot_ <= 80){
-            if (std::find(m_spots.begin(), m_spots.end(), spot_) != m_spots.end()){
-               
+            it = std::find(m_spots.begin(), m_spots.end(), spot_);
+            if (it != m_spots.end()){
+
                return false;
+               
             }
             else{
                 m_spots.push_back(spot_);
-        
                return true;
             }
         }

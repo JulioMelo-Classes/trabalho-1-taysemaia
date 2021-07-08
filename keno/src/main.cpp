@@ -36,8 +36,7 @@ int main(int argc, char const *argv[]){
   cout << ">>> Lendo arquivo de apostas " << argv[1] << ", por favor, aguarde..." << endl;
   cout << "--------------------------------------------------------------" << endl;
 
-  if(!arquivo_entrada.is_open()){
-
+  if(!arquivo_entrada.is_open()){ //! Testa se o arquivo existe ou não
     std::cout << ">>> Arquivo não existe." << std::endl;
 
     return 1;
@@ -45,11 +44,16 @@ int main(int argc, char const *argv[]){
 
   else{
 
-    for(i = 0; i < 3; i++){
+    for(i = 0; i < 3; i++){ //! For 3 vezes, pois o arquivo só possui 3 linhas de entrada
 
       if(i == 0){
-    
-        getline(arquivo_entrada, dinheiro);       
+        
+        /*!
+        * ... Lê a primeira linha do arquivo e armazena em uma variável auxiliar e...
+        * ....testa se a aposta é válida.
+        */
+
+        getline(arquivo_entrada, dinheiro); //!      
         ss1 << dinheiro;
         ss1 >> aux;
 
@@ -66,7 +70,10 @@ int main(int argc, char const *argv[]){
       }
 
       else if(i == 1){// 2 linha do arquivo
-        //rounds
+        /*!
+        ... Lê a segunda linha do arquivo, armazena em uma variável e faz o calculo de quanto
+            por rodada o jogador vai gastar...
+        */
         getline(arquivo_entrada, rodadas);
         ss2 << rodadas;
         ss2 >> irodadas;
@@ -76,21 +83,26 @@ int main(int argc, char const *argv[]){
       }
 
       else if(i == 2){// 3 linha do arquivo
-     
+        
+         /*!
+        ... Lê a terceira linha do arquivo, armazena cada valor em uma variável e vai adicionando
+            ao vetor através da função add_number...
+        */
         getline(arquivo_entrada, num_aposta);
         ss3 << num_aposta;
         
-        for(auto &s : num_aposta) {
+        for(i = 0; i < 15; i++) {
           unsigned short int x = 0;
 
           ss3 >> x;
-
+          
           keno.add_number(x);
         }
 
         
       }
     }
+
 
     cout << " Sua aposta tem " << keno.size() << " números e eles são [ ";
     keno.print(keno.get_spots()); 
@@ -118,8 +130,8 @@ int main(int argc, char const *argv[]){
     cout << "------------------------"<< endl;
     cout << "===== Sumário =====" << endl;
     cout << ">>> Você gastou um total de R$"<< keno.get_wage() << " créditos." << endl;
-    cout << ">>> Hooray! você ganhou R$"<< keno.get_wage() << " créditos." << endl;
-    cout << ">>> Você está saindo do jogo com um total de R$"<< keno.get_wage() << " créditos." << endl;
+    cout << ">>> Hooray! você ganhou R$ xxxx" << " créditos." << endl;
+    cout << ">>> Você está saindo do jogo com um total de R$ xxx" << " créditos." << endl;
   }
 
 
