@@ -10,7 +10,7 @@ int main(int argc, char const *argv[]){
 
   KenoBet keno;
   std::string rodadas, dinheiro, num_aposta;
-  int i, irodadas, num1, total = 20, minimo = 1, maximo = 80;
+  int i, irodadas, total = 20, minimo = 1, maximo = 80;
   stringstream ss1, ss2, ss3;
   float aux, dinheiro_por_rodada;
 
@@ -47,8 +47,8 @@ int main(int argc, char const *argv[]){
 
     for(i = 0; i < 3; i++){
 
-      if(i == 0){//1 linha do arquivo
-        //quanto aposta
+      if(i == 0){
+    
         getline(arquivo_entrada, dinheiro);       
         ss1 << dinheiro;
         ss1 >> aux;
@@ -76,11 +76,11 @@ int main(int argc, char const *argv[]){
       }
 
       else if(i == 2){// 3 linha do arquivo
-        //KenoBet.addnumber()
+     
         getline(arquivo_entrada, num_aposta);
         ss3 << num_aposta;
         
-        for (auto &s : num_aposta) {
+        for(auto &s : num_aposta) {
           unsigned short int x = 0;
 
           ss3 >> x;
@@ -99,17 +99,18 @@ int main(int argc, char const *argv[]){
     cout << "--------+--------" << endl;
     cout << "HITS  |  RETORNO" << endl;
 
-    for(i = 0; i <= keno.size(); i++){
-      cout << i << "     |  " << PAYOFF_TABLE[keno.size() - 1][i] << endl;
+    for(size_t j = 0; j <= keno.size(); j++){
+      cout << j << "     |  " << PAYOFF_TABLE[keno.size() - 1][j] << endl;
     }
     cout << "------------------------"<< endl;
 
     for(i = 1; i <= irodadas; i++){
       cout << " Essa é a rodada #" << i << " de " << irodadas << ", sua aposta é R$" << dinheiro_por_rodada << ". Boa sorte!"<< endl;
       cout << " Os números sorteados são: " << endl;
-      keno.print(keno.vetor_random(total, minimo, maximo)); 
+      keno.vec_rand(total, minimo, maximo); 
+      keno.print(keno.get_random());
+      keno.reset_random();
       cout << endl;
-      (keno.vetor_random(total, minimo, maximo)).clear();
     }
     
     
